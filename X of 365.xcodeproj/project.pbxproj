@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F1B5DC31ED1050600FE4630 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B5DC21ED1050600FE4630 /* AboutController.swift */; };
 		7F1E8DE21EBC36D900ADD2C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1E8DE11EBC36D900ADD2C9 /* AppDelegate.swift */; };
 		7F1E8DE41EBC36D900ADD2C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1E8DE31EBC36D900ADD2C9 /* ViewController.swift */; };
 		7F1E8DE71EBC36D900ADD2C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F1E8DE51EBC36D900ADD2C9 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F1B5DC21ED1050600FE4630 /* AboutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 		7F1E8DDE1EBC36D900ADD2C9 /* X of 365.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X of 365.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F1E8DE11EBC36D900ADD2C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F1E8DE31EBC36D900ADD2C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				7F1E8DE11EBC36D900ADD2C9 /* AppDelegate.swift */,
 				7F1E8DE31EBC36D900ADD2C9 /* ViewController.swift */,
+				7F1B5DC21ED1050600FE4630 /* AboutController.swift */,
 				7F1E8DE51EBC36D900ADD2C9 /* Main.storyboard */,
 				7F1E8DE81EBC36D900ADD2C9 /* Assets.xcassets */,
 				7F1E8DEA1EBC36D900ADD2C9 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				7F1E8DE41EBC36D900ADD2C9 /* ViewController.swift in Sources */,
 				7F1E8DE21EBC36D900ADD2C9 /* AppDelegate.swift in Sources */,
+				7F1B5DC31ED1050600FE4630 /* AboutController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +308,7 @@
 				7F1E8DF21EBC36D900ADD2C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

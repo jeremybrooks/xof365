@@ -1,14 +1,35 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zLx-wx-A6Y">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="NjF-aT-5Qg">
+            <objects>
+                <navigationController id="zLx-wx-A6Y" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Efx-c1-Wkl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1v3-eP-jEG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DPh-fW-Np4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1534" y="306"/>
+        </scene>
+        <!--X of 365-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="X_of_365" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +37,123 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="p9q-c6-aGz">
+                                <rect key="frame" x="27" y="72" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="515651319.60093302">
+                                    <!--2017-05-05 04:28:39 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="dateChangedWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="fBN-wB-0PL"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHH-ev-qU2">
+                                <rect key="frame" x="131" y="296" width="114.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grf-mr-SH5">
+                                <rect key="frame" x="115" y="325" width="145.5" height="119.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="of yyyy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzU-ta-dJ0">
+                                <rect key="frame" x="149" y="452" width="77" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWe-ES-bfF">
+                                <rect key="frame" x="333" y="621" width="26" height="26"/>
+                                <state key="normal" image="Copy"/>
+                                <connections>
+                                    <action selector="copyTouchedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UKV-db-peM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfR-m3-B7J">
+                                <rect key="frame" x="16" y="625" width="22" height="22"/>
+                                <state key="normal" image="Info"/>
+                                <connections>
+                                    <segue destination="sdW-Dg-Ed9" kind="show" id="O2P-xO-BPS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="copied to clipboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uj8-tK-6p7">
+                                <rect key="frame" x="113.5" y="626" width="148" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="p9q-c6-aGz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3LC-Rs-lf8"/>
+                            <constraint firstItem="grf-mr-SH5" firstAttribute="top" secondItem="GHH-ev-qU2" secondAttribute="bottom" id="7AX-cF-8cv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bfR-m3-B7J" secondAttribute="bottom" constant="20" id="EtG-DM-lVB"/>
+                            <constraint firstItem="GHH-ev-qU2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HbJ-5f-ubB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MWe-ES-bfF" secondAttribute="bottom" constant="20" id="MY1-bM-T3y"/>
+                            <constraint firstItem="grf-mr-SH5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rao-Xt-H5d"/>
+                            <constraint firstItem="p9q-c6-aGz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sex-2i-hXp"/>
+                            <constraint firstItem="bfR-m3-B7J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WzX-ys-PMS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p9q-c6-aGz" secondAttribute="trailing" constant="12" id="YFB-XA-Rpx"/>
+                            <constraint firstItem="MWe-ES-bfF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="csi-BU-5Zh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uj8-tK-6p7" secondAttribute="bottom" constant="20" id="f1x-nQ-4E9"/>
+                            <constraint firstItem="p9q-c6-aGz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="iKC-xV-RIU"/>
+                            <constraint firstItem="Uj8-tK-6p7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jLH-g4-3s3"/>
+                            <constraint firstItem="KzU-ta-dJ0" firstAttribute="top" secondItem="grf-mr-SH5" secondAttribute="bottom" constant="7.5" id="oCp-HC-Pxv"/>
+                            <constraint firstItem="GHH-ev-qU2" firstAttribute="top" secondItem="p9q-c6-aGz" secondAttribute="bottom" constant="8" id="sPG-Hf-kCw"/>
+                            <constraint firstItem="KzU-ta-dJ0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z67-mu-Wpw"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="X of 365" id="J5U-gg-GiS"/>
+                    <connections>
+                        <outlet property="datePicker" destination="p9q-c6-aGz" id="fWE-Qf-CLc"/>
+                        <outlet property="dayLabel" destination="grf-mr-SH5" id="SZ7-u6-msn"/>
+                        <outlet property="messageLabel" destination="Uj8-tK-6p7" id="ZsD-2y-Xa8"/>
+                        <outlet property="yearLabel" destination="KzU-ta-dJ0" id="0ST-LF-B5g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-652" y="305"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="dFc-vN-UU5">
+            <objects>
+                <viewController title="About" id="sdW-Dg-Ed9" customClass="AboutController" customModule="X_of_365" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uVT-CP-aSD"/>
+                        <viewControllerLayoutGuide type="bottom" id="ood-mC-9nL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xNx-M2-DrF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V1O-vJ-w4v">
+                                <rect key="frame" x="16" y="0.0" width="343" height="659"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V1O-vJ-w4v" firstAttribute="top" secondItem="xNx-M2-DrF" secondAttribute="topMargin" id="TIG-x3-Wxb"/>
+                            <constraint firstItem="V1O-vJ-w4v" firstAttribute="leading" secondItem="xNx-M2-DrF" secondAttribute="leadingMargin" id="lzo-Uu-a2c"/>
+                            <constraint firstItem="V1O-vJ-w4v" firstAttribute="trailing" secondItem="xNx-M2-DrF" secondAttribute="trailingMargin" id="qS0-Bu-dwD"/>
+                            <constraint firstItem="ood-mC-9nL" firstAttribute="top" secondItem="V1O-vJ-w4v" secondAttribute="bottom" constant="8" id="zS0-Yk-3m1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="content" destination="V1O-vJ-w4v" id="aRN-uZ-NhM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ag8-hb-fzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="883.80809595202402"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Copy" width="26" height="26"/>
+        <image name="Info" width="22" height="22"/>
+    </resources>
 </document>
