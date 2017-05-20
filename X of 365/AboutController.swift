@@ -24,7 +24,7 @@
 
 import UIKit
 
-class AboutController: UIViewController {
+class AboutController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var content: UIWebView!
     
@@ -35,9 +35,9 @@ class AboutController: UIViewController {
         html += "<head><style>h1 {text-align:center;}</style></head>"
         html += "<body>"
         html += "<h1>X of 365</h1>"
-        html += "<p>Easily find the ordinal day of any year. Handy for 365 projects.</p>"
+        html += "<p>Easily find the ordinal day of any year. Originally written to assist with 365 projects.</p>"
         html += "<p>by Jeremy Brooks</p>"
-        html += "<p>source code available on GitHub</p>"
+        html += "<p>source code available on <a href='https://github.com/jeremybrooks/xof365'>GitHub</a></p>"
         html += "</body></html>"
 
         self.content.loadHTMLString(html, baseURL: nil)
@@ -49,15 +49,12 @@ class AboutController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // open links in Safari, rather than in UIWebView
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        if navigationType == UIWebViewNavigationType.linkClicked {
+            UIApplication.shared.open(request.url!, options:[:], completionHandler: nil)
+            return false
+        }
+        return true
     }
-    */
-
 }
